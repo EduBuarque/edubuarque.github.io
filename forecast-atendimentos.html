@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Forecasting de Atendimentos Hospitalares - Eduardo Buarque</title>
+  <meta content="" name="description">
+  <meta content=" Forecasting, datascience, ciência de dados, analytics, machine learning, aprendizado de máquina, IA, inteligência artificial" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    h2 {
+      margin-bottom: 2em; /* Você pode ajustar o valor conforme necessário */
+    }
+  </style>
+  <!-- =======================================================
+  * Template Name: Vlava - v2.2.0
+  * Template URL: https://bootstrapmade.com/vlava-free-bootstrap-one-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html"><span>Eduardo Buarque</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Início</a></li>
+          <li><a href="index.html#about">Sobre</a></li>
+          <li><a href="index.html#services">Serviços</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>          
+          <li><a href="index.html#contact">Contato</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          
+          <li><a href="portfolio-details.html">Detalhes do Portfolio</a></li>
+          <li>Forecasting de Atendimentos Hospitalares</li>
+        </ol>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <!-- Inicio -->
+      <div class="container centered-paragraph">
+        <h2>Forecasting de Atendimentos Hospitalares</h2>
+        
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="owl-carousel portfolio-details-carousel">
+              <img src="assets/img/portfolio/dash-health.jpg" class="img-fluid" alt="">              
+            </div>
+          </div>                
+        </div>
+        <p></p>
+        <h3>Contexto</h3>
+        <p>
+          A Gestão Hospitalar busca <strong>eficiência operacional e qualidade no cuidado ao paciente</strong>.
+          Um dos desafios da gestão é atingir seus objetivos e otimizar seus recursos - sejam logísticos, 
+          financeiros, tecnológicos ou de pessoal. 
+          Por isso, conseguir prever a <strong>quantidade de Atendimentos Hospitalares</strong> em um 
+          determinado horário, dia, senama ou mês pode ajudar a <strong>definir diversas estratégias de gestão            
+          </strong>, principalmente se incluir detalhes como 
+          quantidade por Especialidade Médica, Tipo de Atendimento (Consultas, Exames, Internações, etc.) 
+          ou Convênios médicos específicos, o que permite planejar a programação de agendas médicas, 
+          o remanejamento de recursos ou a oferta de serviços, por exemplo, com maior eficiência.
+          <br>
+          Entender as particularidades de como se comporta essa dinâmica é fundamental para que a Gestão Hospitalar 
+          tome decisões e planeje com mais propriedade.
+        </p>
+        
+      </div>
+      <!-- Bloco de Imagem à Direita, com Texto -->
+      <div class="container centered-paragraph">
+        <h3>Problema de Negócio</h3>
+          <h5>Introdução</h5>          
+          <p>
+            A <strong>qualidade do atendimento ao paciente </strong> é fundamental em qualquer instituição de saúde. Por isso, <strong>identificar</strong>
+            antecipadamente variações na <strong>demanda</strong> por certos tratamentos médicos <strong>reforça a preparação da equipe, a
+            disponibilização de profissionais</strong>, assim como <strong>permite dimensionar a oferta de serviços de saúde</strong> de maneira mais eficaz.
+          </p>
+          <p>
+            Utilizar essas previsões para <strong>alocar recursos</strong> profissionais (médicos, enfermeiros e equipamentos) e logísticos (estoques de material e 
+            medicamentos) permite <strong>gerí-los de uma forma mais eficiente e racional</strong>, considerando a demanda prevista.
+          </p>
+          <p>
+            Mas, além de planejar e alocar recursos, para oferecer melhores serviços é preciso conhecer ainda o perfil de seus pacientes (clínico, demográfico, preferências, etc), a fim de elaborar <strong>estratégias de Marketing</strong> atrativas, alinhadas com essas previsões.
+          </p>
+          <h5>Proposta</h5>          
+          <p>Criar uma <strong>Análise Preditiva</strong>, que é ideal para montar <strong>prováveis cenários futuros</strong> realistas e assim prever a quantidade de Atendimentos Hospitalares.</p>
+
+
+
+          <p>
+            <h5>Questões importantes:</h5>
+            <ul>
+              <li>Para conseguir prever os próximos atendimentos devemos avaliar o histórico do movimento de pacientes de quanto tempo? Um ano? Dois? Ou mais?            
+              </li>
+              <li>Qual seria o prazo futuro máximo em que podemos confiar na previsão?</li>
+              <li>Quanto pode ser economizado e quanta receita pode ser gerada com base nas previsões?</li>
+              <li>Qual a taxa de assertividade mínima que estamos dispostos a aceitar em cada segmento da previsão?</li>
+            </ul>
+          </p>
+          <p>            
+            <h3>O Projeto</h3>
+            <div class="row">             
+              <div class="col-lg-8">
+                <div class="owl-carousel portfolio-details-carousel">
+                  <img src="assets/img/portfolio/code.jpg" class="img-fluid" alt="Atendimentos Hospitalares">              
+                </div>
+              </div> 
+            </div>
+            <br>
+            <h5><strong>Início</strong></h5>
+            <p>               
+              A partir da indicação dos gestores sobre a necessidade de prever a quantidade de Atendimentos 
+              Hospitalares, precisamos <strong>avaliar que recursos dispomos</strong> para essa finalidade 
+              e assim<strong> comprovar a viabilidade técnica</strong>. 
+              <br>
+              Caso seja factível, seguiremos com a <strong>identificação das fontes de dados, extração, engenharia e análise de dados inicial.</strong>
+            </p>
+            <h5><strong>Dados Disponíveis</strong></h5>
+            <p>              
+              <strong>Dados são abundantes, mas nem sempre estão catalogados</strong>. Então, nossa primeira incursão foi uma conversa com 
+              os Analistas de Negócio, a fim de mapear os dados necessários e as possíveis fontes. É uma etapa crucial, pois 
+              caso não seja assertiva, podemos ter que repetí-la quando os resultados obtidos não forem satisfatórios.
+              <br>
+              Identificamos que existem <strong>históricos</strong> relacionados a Atendimentos Hospitalares consistentes dos 
+              <strong>últimos 6 anos</strong>, considerando dados diretos e indiretos, então é preciso aprofundar 
+              o entendimento dos processos de Atendimento e nas relações entre as diversas representações no <strong>contexto de negócio</strong>.
+              <br>
+              Entendemos que <strong>o contexto dos dados de Atendimento Hospitalar</strong> traz informações sobre os <strong>serviços e recursos</strong> hospitalares, 
+              além de informações sobre o <strong>perfil demográfico e clínico dos pacientes</strong>.
+            </p>
+            <h5><strong>Fontes de Dados</strong></h5>
+            <p>
+              Os dados serão extraídos da <strong>base de dados de um Hospital Information System</strong> (ou HIS - um ERP hospitalar), que registra 
+              tanto os dados da visita hospitalar do paciente, quanto seus dados clínicos, demográficos, informações sobre recursos utilizados nos 
+              atendimentos e ainda dados financeiros correspondentes.
+              <br>
+              Para isso, é necessário entender o modelo de dados que representa o Atendimento Hospitalar e seus aspectos, ou seja, as tabela do banco 
+              de dados, seus relacionamentos e significado. O modelo é muito amplo, portanto, quanto mais objetivo formos, menor será a
+              complexidade da análise. Assim, o conhecimento de negócio é fundamental neste momento.
+              <br>
+              A extração de dados foi realizada com <strong>Apache NiFi</strong>, uma ferramenta que automatiza fluxo de dados. No caso, outra base SQL será o destino da 
+              extração. Para simplificar o fluxo no trabalho, iremos trabalhar apenas em cima de arquivos CSV, devido à questões de acesso pelo pipeline 
+              estabelecido.
+            </p>
+            <h5><strong>Análise Preliminar de Dados</strong></h5>
+            <p>
+              Após uma extração contemplando atributos básicos dos Atendimentos, iremos visualizar os totais por ano e alguns 
+              agrupamentos demofráficos, a fim de identificar nossas opções. O objetivo dessa análise é propor 
+              um conjunto de dados para o trabalho. 
+            </p>
+            <br>
+            <div class="col-lg-12">
+              <div class="row">
+                <img src="assets/img/portfolio/dash_atend1.PNG" class="img-fluid" alt="Total de Atendimentos Hospitalares">              
+              </div>
+            </div>
+            <br>            
+            <p>             
+            Podemos ver pelos valores no Cartão inicial e nos Gráficos seguintes que <strong>houve uma sensível diminuição 
+            dos Atendimentos no ano de 2020</strong>, algo que notoriamente tem explicação na <strong>pandemia de COVID-19</strong>. 
+            Embora os Leitos de Internação tenham sido ocupados quase que em tempo integral nesse período, vemos 
+            no gráfico da parte inferior direita (Total por Ano e Tipo Atendimentos) que as Internações 
+            são as visitas de menor volume entre todas, justamente devido à limitação de leitos disponíveis e tempo de estadia. 
+            Dessa forma, a diminuição de Pacientes nos outros tipos de Atendimento trouxe um reflexo considerável. Não entraremos aqui no aspecto 
+            de retorno financeiro desse período. 
+            </p>
+            <p>
+              Quanto aos dados demográficos dos Pacientes, vemos que as tendências se mantêm proporcionais com o passar dos anos: 
+              a maioria dos pacientes são do sexo feminino, as faixas etárias abaixo dos 80 anos são as mais frequentes e relativamente 
+              equilibradas, os tipos de atendimentos mais realizados são Consultas e Urgência, seguidas por realização de Exames.
+            </p>
+            <div class="col-lg-10">
+              <div class="row">
+                <img src="assets/img/portfolio/dash_atend2.PNG" class="img-fluid" alt="Total de Atendimentos Hospitalares">              
+              </div>
+            </div>
+            <br>
+            <p>
+              Esta é a visão da variação do total de atendimentos por mês ao longo de 4 anos.
+            </p>
+            <p>
+              Considerando a <strong>movimentação irregular em 2020</strong> e os reflexos ainda percebidos <strong>em 2021</strong>, podemos <strong>trabalhar 
+                com os dados a partir de 2022</strong> para o Modelo Preditivo - quando os Atendimentos voltam ao patamar anterior à pandemia - ou, simplesmente, 
+                remover esse período 2020 - 2021. Nesse momento não faremos nenhuma outra segmentação ou limitação no conjunto de dados.
+            </p>
+            <h5><strong>Testaremos Hipóteses?</strong></h5>
+            <p>
+              Neste momento, procuramos atender a uma demanda de negócio sobre a previsão de Atendimentos e não estamos elaborando hipóteses. 
+              Uma vez que a predição se mostre assertiva, cada Gestor irá trabalhar com orientações para tomada de decisão e então novos problemas 
+              serão trazidos e hipóteses serão elaboradas para validação. Será necessário uma análise de cada proposta, imersão nos processos de negócio e um novo ciclo de modelagem 
+              de dados, análise exploratória, modelagem estatística, realização do teste de hipótese, talvez uma análise preditiva e apresentação dos resultados.
+            </p>
+            <h5><strong>Proposta do Modelo Preditivo</strong></h5>
+            <p>
+              Dessa forma, o papel do Cientista de Dados agora é olhar sua caixa de ferramentas em busca de técnicas promissoras para resolver 
+              o problema da previsão de quantidade de atendimentos. 
+              <br>
+              Existem diversos métodos possíveis para construir o Modelo Preditivo para este tipo de problema, como:
+              <ul>
+                <li>Modelos clássicos de séries temporais</li>
+                <li>Modelos supervisionados</li>
+                <li>Modelos baseados em aprendizagem profunda.</li>
+              </ul>
+              Mas normalmente iniciamos dos menos para os mais complexos. 
+              Alguns exemplos são Modelos Lineares como Regressão Logística ou de Poisson, entre os menos complexos, e Redes Neurais entre os mais complexos. 
+              Podemos ainda realizar combinações entre as técnicas. Mas, a previsão da quantidade de algo em determinada janela de tempo (mês, dia, hora, etc.)
+              é um problema clássico a ser modelado como uma <strong>Série Temporal univariante</strong> (os dados para o modelo terão apenas um atributo "data" 
+              e um "valor"). Essa vai ser nossa aposta inicial.
+            </p>
+            <p>
+              Ou seja, a Série temporal modela o problema como um conjunto de valores coletados em determinados momentos, em intervalos de tempo constantes 
+              e ordenados cronologicamente, para identificar padrões de comportamento que permitam prever estes valores no futuro.
+            </p>
+            <br>
+            <h5><strong>Análise Exploratória de Dados</strong></h5>
+          
+            <p>
+              A Estatística Descritiva trabalha com o entendimento dos dados através da síntetise (ou resumo) dos valores de cada atributo no conjunto, permitindo 
+              uma visão global em sua variação, distribuição e na busca por padrões (estatisticamente) interessantes.
+              <br>
+              Os atributos a serem analisados e as análises necessárias podem variar. Podemos percorrer vários caminhos até amadurecer nossa análise e definir nossa proposta.
+            </p>
+            <br>
+            <p>
+              <strong>Atributos do Conjunto de dados</strong>
+            </p>            
+            
+            <div class="col-lg-6">              
+              <div class="row">
+                <img src="assets/img/portfolio/dataset.PNG" class="img-fluid" alt="Total de Atendimentos Hospitalares">              
+              </div>
+            </div>
+            <br>
+            <p>
+              <strong>Descrição:</strong>
+            </p>
+            <ul>
+              <li>Local_Atendimento: setor em que o paciente inicia o atendimento</li>
+              <li>Convenio: Código da Operadora de saúde do Paciente</li>
+              <li>tipo_conta: Se o paciente foi atendido pelo Convênio ou Particular</li>
+              <li>data: dia que o paciente iniciou o atendimento</li>
+              <li>Tipo_atendimento: (I)nternação, Consult(A), (E)xame, (U)rgência</li>
+              <li>Medico: código do médico que atendeu o paciente</li>
+            </ul>
+            <p>
+              <strong>Totais do Dataset por Tipo de Atendimento:</strong>
+            </p>
+            <div class="col-lg-10">
+              <div class="row">
+                <img src="assets/img/portfolio/percentual_tipo.PNG" class="img-fluid" alt="Dataset de Atendimentos de Consulta">              
+              </div>
+            </div>
+            <br>
+            <p>
+              O total no datase é de 1.864.791 registros. Os Atendimentos mais numerosos são Urgências e Consultas Médicas. Para avaliar 
+              os Atendimentos por tipo, vamos agrupá-los (um Count) em total de Tipo de Atendimentos por dia.
+            </p>
+            <div class="col-lg-12">
+              <div class="row">
+                <img src="assets/img/portfolio/Filtrar_consultas.PNG" class="img-fluid" alt="Dataset de Atendimentos de Consulta">              
+              </div>
+            </div>
+            <br>
+            <p>
+              <strong>Total de Consultas:</strong>
+            </p>
+            <p>
+              Uma vez agrupado em Total de Atendimentos por Dia, podemos agora filtrar o dataset a fim de avaliar cada tipo de visita hospitalar. 
+              Por exemplo, para o planejamento das Agendas Médicas, filtraremos o dataset por Consultas
+            </p>
+            <div class="col-lg-10">
+              <div class="row">
+                <img src="assets/img/portfolio/ds_consulta.PNG" class="img-fluid" alt="Dataset de Atendimentos de Consulta">              
+              </div>
+            </div>
+            <br>
+
+            <p>
+              O total de 1695 registros significa que temos o total de consultas em um período de 1.695 Dias consecutivos.
+              <br>
+              Uma olhada inicial na Série Temporal das Consultas pode trazer insigths.
+            </p>
+            
+            <div class="col-lg-10">
+              <div class="row">
+                <img src="assets/img/portfolio/Serie_consultas.PNG" class="img-fluid" alt="Dataset de Atendimentos de Consulta">              
+              </div>
+            </div>
+            <br>
+            <p>
+              Sabemos que a distorção no comportamento antes de 2022 é algo que impactaria no modelo preditivo. 
+              <br>
+              Um ponto a se observar é que a visualização anterior da Série está muito ampla e não enxergamos as particularidades do 
+              dia a dia. Uma análise melhor seria dar um "zoom" em um período e olhar os padrões de total de consultas. Vamos 
+              ver 2 meses de 2022 (outubro e novembro):
+            </p>
+            <div class="col-lg-10">
+              <div class="row">
+                <img src="assets/img/portfolio/Zoom_Serie.PNG" class="img-fluid" alt="Dataset de Atendimentos de Consulta">              
+              </div>
+            </div>
+            <br>
+            <p>
+              Cada data no eixo X obedece ao intervalo de uma semana, iniciando em 01/10/2022 (um sábado). Percebemos que no 
+              primeiro fim de semana temos diminuição na quantidade de consultas, que vai subindo até o meio da semana e novamente 
+              começa a diminuir. Vemos que no dia 12/10/2022 (feriado nacional) ocorre outra súbita queda. Portanto, pelo padrão 
+              observado, fins de semana e feriados tendem a ter baixas e em seguida os picos.     
+            </p>
+            <p>
+              O porque dessas baixas pode ser levantado. Intuitivamente, pensamos que as pessoas não marcam consultas nos fins de 
+              semana e feriados, mas pode ser por outros motivos, como menor oferta de agendas médicas e/ou menor disponibilidade de pessoal 
+              administrativo para atendimento. Mas, essa análise diagnóstica não é o propósito nesse momento. Entretanto  , podemos nos 
+              certificar quais dias têm mais ou menos atendimentos nos últimos meses. 
+            </p>
+            <br>
+            <div class="col-lg-12">
+              <div class="row">
+                <img src="assets/img/portfolio/max_min_atendimento.png" class="img-fluid" alt="Dataset de Atendimentos de Consulta">              
+              </div>
+            </div>
+            <br>
+            <p>
+              O dia mais frenquentados na semana é quarta e o que menos tem visitas é domingo. Mesmo ampliando para uma lista com mais 
+              de 4 registros, o padrão se mantém, exceto quando há feriado na semana.
+              <br>
+              O padrão de distribuição dos Atendimentos por mês nos últimos 2 anos será representado através de Boxplots, um tipo de 
+              um gráfico que mostra a distribuição dos valores através de uma "caixa" que exibe as hastes, as extremidades (Limite inferior 
+              e Limite superior ou Quartis Q1 e Q3), a linha interna da caixa (Mediana), além de eventuais outliers. Estas informações são 
+              capazes de revelar padrões estatíscos importantes nos valores para análise e uso dos dados. Uma explicação mais detalhada de 
+              seus conceitos é apresentado no <a href="https://github.com/EduBuarque/portfolio/blob/main/modelos/Atendimentos.ipynb">Jupyter Notebook</a> . 
+            </p>
+            <br>
+            <div class="col-lg-12">
+              <div class="row">
+                <img src="assets/img/portfolio/Box_lot_mes_ano.PNG" class="img-fluid" alt="Dataset de Atendimentos de Consulta">              
+              </div>
+            </div>
+            <br>
+            <p>
+              Considerando a linha interna que divide a caixa (Mediana), vemos a parte inferior dos gráficos (amplitude Q1) muito maior que a superior (amplitude Q3) na maioria dos casos. 
+              Esta assimetria indica que existe uma concentração de valores altos "puxando" a mediana para cima - o que mostra no geral uma boa frequência de pacientes por dias.
+            </p>
+            
+            <br>
+            <h5><strong>Decomposição de série temporal</strong></h5>
+            <p>
+              Os três componentes importantes em uma série temporal são: sazonalidade, tendência e ruído.
+              <br>
+              <strong>Sazonalidade</strong> é a repetição de um padrão de movimento na variável da série temporal. Por exemplo, vimos que a quantidade de atendimentos 
+              diminue nos fins de semana e aumenta no meio da semana. 
+              <strong>Tendência</strong> é o padrão ascendente, descendente ou estável de longo prazo. Visualmente, é preciso analisar a série e avaliar se ela 
+              <i>tende</i> a ir subindo, descendo ou se mantém relativamente plana no gráfico.
+               Mas, ao construir modelos, vamos combinar esses componentes em funções matemáticas, sendo que sempre haverá algum nível de erro nas previsões - 
+               o <strong>Ruído</strong> - que é a variabilidade numa série temporal que não pode ser explicada pela sazonalidade nem por uma tendência. 
+            </p>
+            Testamos a abordagem clássica ARIMA para previsão de séries temporais, o modelo interno da Meta (Facebook), 
+            Prophet, que foi projetado para prever séries temporais e o modelo que utilizou uma Rede Neural Recorrente 
+            com LSTM, em que alcançamos os melhores resultados.
+</section>      
+</main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer"> 
+
+    <div class="footer-top">
+
+      <div class="container">
+
+        <div class="row  justify-content-center">
+          <div class="col-lg-6">
+            <h3>Eduardo Buarque</h3>
+            <p>“Um problema bem formulado é um problema meio resolvido.” <br>
+              (Charles Kettering)
+            </p>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Vlava</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vlava-free-bootstrap-one-page-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
